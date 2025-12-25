@@ -14,7 +14,7 @@ if (registerForm) {
                 password: document.getElementById('password').value
             })
         });
-        const data = await res.json(); // користиме JSON
+        const data = await res.json(); 
         document.getElementById('registerMessage').innerText = data.message + (data.otp ? `\nOTP за тест: ${data.otp}` : '');
         if (res.ok) {
             setTimeout(() => {
