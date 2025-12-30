@@ -53,6 +53,3 @@ Future improvements may include:
 
 ---
 
-## 📂 Project Structure
-
-
