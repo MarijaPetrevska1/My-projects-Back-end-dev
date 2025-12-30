@@ -1,21 +1,15 @@
 # 🔐 SecurityLab
 
-**SecurityLab** is a web application built with **ASP.NET Core** that demonstrates modern security practices including **user authentication, two-factor authentication (2FA), and role-based authorization**. This project was developed as a lab exercise to learn and implement secure web application techniques.
+**SecurityLab** is a web application built with **ASP.NET Core** that demonstrates modern security practices, including **user authentication, two-factor authentication (2FA), and role-based authorization**.  
+This project was developed as a personal learning and exercise project to explore and practice secure web application techniques. It is currently a work in progress and serves as a platform for testing and implementing new security concepts.  
 
+Future improvements may include:  
+1. More robust UI/UX with responsive design  
+2. Advanced session and token management 
+3. Integration with real email providers for OTP delivery  
+4. Additional security enhancements and error handling  
+5. Full unit and integration testing
 ---
-## Project Status
-
-This project is currently a **work in progress** and was developed as a **student project**.  
-It demonstrates basic and intermediate concepts of authentication, two-factor authentication, and role-based authorization in ASP.NET Core.
-
-Future improvements may include:
-
-- More robust **UI/UX** with responsive design
-- Advanced **session and token management**
-- Integration with real **email providers** for OTP delivery
-- Additional **security enhancements** and error handling
-- Full **unit and integration testing**
-
 
 ## 🚀 Features
 
