@@ -40,3 +40,7 @@ Swagger
 - Helpers: Dependency injection and other helpers
 
 - Controllers: API endpoints
+
+### => About This Project
+
+This project was created as a learning exercise to practice building scalable Web APIs using ASP.NET Core, Entity Framework Core, and Clean Architecture principles.
