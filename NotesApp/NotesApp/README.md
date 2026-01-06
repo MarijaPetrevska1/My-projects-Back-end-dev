@@ -1,14 +1,15 @@
-📝 NotesApp – ASP.NET Web API
+## 📝 NotesApp – ASP.NET Web API
 
 📌 Description
 NotesApp is a Web API application built with ASP.NET Core that allows managing notes and users.
 The project is created for practicing and reviewing C#, ASP.NET Web API, Repository Pattern, Dependency Injection, DTOs, and data mapping.
 
-🛠️ Technologies
+--
+### 🛠️ Technologies
 
 ASP.NET Core Web API, C#, Entity Framework Core, SQL Server, ADO.NET, Dapper, LINQ
-
-🧱 Architecture (Layered Architecture)
+  
+### 🧱 Architecture (Layered Architecture)
 
 The project follows a clean layered architecture:
 
