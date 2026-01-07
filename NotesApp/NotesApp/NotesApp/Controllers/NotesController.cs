@@ -13,7 +13,7 @@ namespace Avenga.NotesApp.Controllers
 
         public NotesController(INoteService noteService)
         {
-            _noteService = noteService;
+            _noteService = noteService; 
         }
 
         [HttpGet]

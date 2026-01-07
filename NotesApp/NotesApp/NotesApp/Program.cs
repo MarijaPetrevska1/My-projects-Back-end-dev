@@ -1,5 +1,8 @@
 using Avenga.NotesApp.Helpers;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using NotesApp.Helpers;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +26,28 @@ DependencyInjectionHelper.InjectDapperRepositories(builder.Services, appSettings
 DependencyInjectionHelper.InjectAdoRepositories(builder.Services, appSettingsObject.ConnectionString);
 DependencyInjectionHelper.InjectServices(builder.Services);
 
-
+//Configure JWT
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    //Obligation of metadata in request is false
+    x.RequireHttpsMetadata = false;
+    // we expect the token into httpContect
+    x.SaveToken = true;
+    //how to validate the token
+    x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidateAudience = false,
+        ValidateIssuer = false,
+        ValidateIssuerSigningKey = true,
+        //the secret key
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(appSettingsObject.SecretKey))
+        //IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("Our very very secret secret key!"))
+    };
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
